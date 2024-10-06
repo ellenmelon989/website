@@ -1,0 +1,78 @@
+
+body{
+    background-image: url("images/waterlilies.jpg");
+    background-color: #F7ECE1;
+    background-size: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2{
+    color:#F7ECE1;
+    line-height: 0.01;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+body {
+    font-family: Garamond, Georgia, Times, 'Times New Roman', serif;
+    color: #C38783;
+    text-align: center;
+    line-height: 1;
+}
+p, li{
+    color:#F7ECE1;
+}
+main{
+    min-height: calc(100vh - 325px);
+}
+main .box{
+    border: #848E52;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 10px #2D080A;
+    background-color: rgba(45, 8, 10, 0.6);
+    width:49%;
+    margin-bottom: 10%;
+}
+.box.odd{
+    margin-left:50%;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+}
+.nav{
+    font-size: 20px;
+    line-height: 250%;
+    padding-bottom: 20px;
+    margin-left: -65%;
+}
+.nav, footer{
+    background-color: rgba(45, 8, 10, 1);
+    border: #848E52;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 125px;
+}
+.contact p {
+    color: #848E52;
+}
+a {
+    color:#848E52;
+}
+nav a{
+    color: #F7ECE1;
+}
+main a {
+    color: #C38783;
+}
+a:hover{
+    color:#918199;
+}
