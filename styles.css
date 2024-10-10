@@ -84,7 +84,7 @@ main a {
 a:hover{
     color:#918199;
 }
-@media screen and (min-width:701px){
+@media screen and (min-width:724px){
     img{
         width:17vw;
         display: inline-block;
@@ -98,7 +98,7 @@ a:hover{
         margin-left: 0;
     }
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:723.99px){
     img{
         border-radius: 20px;
         box-shadow: 0px 0px 0px 10px #2D080A;
