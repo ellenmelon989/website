@@ -19,22 +19,9 @@ h1{
     font-family: 'P22 Monet';
     font-size: 500%;
     display: flex;
-    /* border-radius: 15px; */
     margin-top:40px;
     margin-bottom: 0px;
-    /* margin-left: 20%;
-    margin-right: 20%; */
-    /* background-size: 100px 10px; */
     justify-content: center;  /* horizontal center */
-    /* background-image: url('images/goldtag.png') ;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center; */
-    /* border: 40px solid;  
-    border-image: url('images/rounded.png') 180 round;  */
-
-    /* border-radius: 10px; */
-    /* align-items: center;      vertical center */
 }
 .overlay h1{
     font-size: 400%;
@@ -113,6 +100,14 @@ nav a{
      1px  1px 0 black;
 }
 
+.poverlay{
+    position: fixed;
+    inset: 0;         
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: auto;
+}
 
 .home{
     border: 30px solid transparent; /* create space for the frame */
@@ -148,18 +143,14 @@ nav a{
     backdrop-filter: blur(4px);
     text-align: center;
     font-size: 115%;
-    /* border: 60px solid transparent; 
-    border-image: url('images/borderframe1.png') 140 round; */
 }
 .one video:not(.plaque){
     border: 40px solid;
     border-image: url('images/borderthick.png') 180 round;
-    /* width:65vw; */
 }
 .one{
-    width: 65vw;
+    width: 55vw;
     object-fit:cover;
-    /* margin-left: 200px; */
 }
 .three img{
     background-color: saddlebrown;
@@ -170,9 +161,6 @@ nav a{
 .three{
     width: 580px;
 }
-/* .two img{
-    border-radius: 10px;
-} */
 .two img{
     border: 40px solid;
     border-image: url('images/bordersimple.png') 130 round;
@@ -181,52 +169,83 @@ nav a{
     width: 650px;
 }
 .four{
-    width: 350px;
-    padding-left: 100px;
+    width: 300px;
+    padding-top: 100px;
 }
 .four img{
-    /* width:100px; */
     border: 40px solid;
     border-image: url('images/borderframe1.png') 130 round;
 } 
-
-.gallery {
-    /* margin-top: -20px; */
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 40px; 
-    padding-left: 20px;
-    padding-right: 20px;
-    overflow:hidden;
-    /* align-items: flex-start;  */
-    justify-content: center;
-}
-
-.gallery-item {
-    position: relative;
-    text-align: center;
-    margin: 10px; 
-}
 
 .gallery-item img, video {
     width: 100%;
     height: auto;
     display: block;
 }
+.carousel {
+    position: relative;
+    height: 100%;
+    perspective: 1400px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gallery-item {
+    position: absolute;
+    text-align: center;
+    margin: 10px; 
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+.gallery-item.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
 
-/* @media (min-width: 700px) {
-    .two {
-      margin-top: 150px;
-      margin-left: -70px;
-    }
-    .three {
-      margin-top: -200px;
-    }
-    .four{
-      margin-top: -65px;
-      margin-left: -50px;
-    }
-  } */
+.gallery-item.prev {
+  transform: translate(-130%, -50%) scale(0.8);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.gallery-item.next {
+  transform: translate(30%, -50%) scale(0.8);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.gallery-item.hidden {
+  opacity: 0;
+  z-index: 1;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: inherit;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
 .gallery-item p {
     margin-left: 40px;
     margin-top: 10px;
