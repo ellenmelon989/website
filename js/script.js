@@ -100,8 +100,11 @@ const images = [
     }
 
     index = (index + 1) % images.length;
+    const panels = document.querySelectorAll('.text-panel');
+    panels.forEach(p => {
+      p.style.backgroundColor = hexToRGBA(currentColor, 0.7);
+    });
   }
-
   changeBackground();
   setInterval(changeBackground, 1000);
   // button();

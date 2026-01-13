@@ -176,6 +176,10 @@ nav a{
     border: 40px solid;
     border-image: url('images/borderframe1.png') 130 round;
 } 
+.five video{
+    border: 40px solid;
+    border-image: url('images/bordersimple.png') 130 round;
+}
 
 .gallery-item img, video {
     width: 100%;
@@ -218,13 +222,13 @@ nav a{
 
 .gallery-item.prev {
   transform: translate(-130%, -50%) scale(0.8);
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: 1;
 }
 
 .gallery-item.next {
   transform: translate(30%, -50%) scale(0.8);
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: 1;
 }
 
@@ -243,7 +247,11 @@ nav a{
   cursor: pointer;
   z-index: 10;
 }
-
+.text-panel {
+    display: inline-block;
+    padding: 0.6em 1em;
+    border-radius: 1.5em;
+}
 .arrow.left { left: 20px; }
 .arrow.right { right: 20px; }
 .gallery-item p {
