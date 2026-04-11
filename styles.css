@@ -188,6 +188,15 @@ nav a{
     border: 40px solid;
     border-image: url('images/borderthick.png') 180 round;
 }
+.seven {
+    padding-top: 100px;
+    width: 20vw;
+}
+.seven img{
+    border: 40px solid;
+    border-image: url('images/borderthick.png') 180 round;
+}
+
 .gallery-item img, video {
     width: 100%;
     height: auto;
