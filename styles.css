@@ -180,7 +180,14 @@ nav a{
     border: 40px solid;
     border-image: url('images/bordersimple.png') 130 round;
 }
-
+.six {
+    padding-top: 100px;
+    width: 20vw;
+}
+.six img{
+    border: 40px solid;
+    border-image: url('images/borderthick.png') 180 round;
+}
 .gallery-item img, video {
     width: 100%;
     height: auto;
